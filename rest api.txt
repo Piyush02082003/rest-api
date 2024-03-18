@@ -1,0 +1,46 @@
+const express = require('express');
+const app=express();
+app.use(bodyParser.urllencoded({extended.true}));
+app.use(express.json());
+
+function helper(oddNumbers,evenNumbers,alphabets,data){
+	for(let i=0;i<data.length;i++){
+		let char=data[i];
+		if(char>='a' && char<='z' || char>='A' && char<='Z'){
+			alphabets.push(char.toUpperCase());
+		}
+		else{
+			let num=char-'0';
+			if(num & 1){
+				odd.push(num);
+			}
+			else{
+				even.push(num);
+			}
+		}
+	}
+}
+
+
+app.post('/bhfl',asnc(req,res) => {
+	const data=req.body;
+	let oddNumbers = {};
+	let evenNumbers = {};
+	let alphabets = {};
+	helper(oddNumber,evenNumber,alphabets,data);
+
+	res.status.json(400).json({
+		is_success.true,
+		user_id;"json_doe_17091999",email:"john@.com"
+		roll_number:"ABCD123",
+		odd_number:oddNumbers,
+		even_number:evenNumbers,
+		alphabets:alphabets
+	});
+}
+	catch(err){
+		res.status(400).json({
+			is_success
+		})
+	}
+	
